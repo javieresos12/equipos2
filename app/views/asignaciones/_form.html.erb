@@ -1,0 +1,38 @@
+<%= form_with(model: asignacione, local: true) do |form| %>
+  <% if asignacione.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(asignacione.errors.count, "error") %> prohibited this asignacione from being saved:</h2>
+
+      <ul>
+      <% asignacione.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :persona_id %>
+    <%= form.text_field :persona_id, id: :asignacione_persona_id, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha, id: :asignacione_fecha, class:"form-control"  %>
+  </div>
+
+  <div class="form-group row col-sm-4 "> 
+    <%= form.label :idEstadoPersonaEquipo %>
+    <%= form.number_field :idEstadoPersonaEquipo, id: :asignacione_idEstadoPersonaEquipo, class:"form-control" %>
+  </div>
+<!--
+  <div class="form-group row col-sm-4">
+    <%= form.label :eliminado %>
+    <%= form.number_field :eliminado, id: :asignacione_eliminado, class:"form-control" %>
+  </div>
+-->
+  <div class="actions">
+    <%= form.submit "Guardar", :class=>"btn btn-secondary"%>
+    <%= link_to 'Eliminar', asignacione, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %></td>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Personas</h1>
+
+<%= link_to 'Nuevo', new_persona_path, :class=>"btn btn-primary btn-sm" %>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="w-50 text-center">Nombres</th>
+      <th class="w-50 text-center">Apellidos</th>
+      <th class="w-50 text-center">Identificacion</th>
+      <th class="w-50 text-center">Correo</th>
+      <th class="w-25 text-center">Idestadopersona</th>
+      <th class="w-25 text-center">Idtipopersona</th>
+      <th class="w-25 text-center">Idarea</th>
+      <th class="w-25 text-center">Idcargo</th>
+      <th class="w-25 text-center">Idtipoidentificacion</th>
+     <!-- <th>Eliminado</th>-->
+  
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personas.each do |persona| %>
+      <tr>
+        <td><a href="/personas/<%= persona['id'] %>" "Mostrar"><%= persona.nombres %></a></td>
+        <td><%= persona.apellidos %></td>
+        <td><%= persona.identificacion %></td>
+        <td><%= persona.correo %></td>
+        <td><%= persona.idEstadoPersona %></td>
+        <td><%= persona.idtipoPersona %></td>
+        <td><%= persona.idarea %></td>
+        <td><%= persona.idcargo %></td>
+        <td><%= persona.idTipoIdentificacion %></td>
+        <!--<td><%= persona.eliminado %></td>
+        <td><%= link_to 'Show', persona %></td>
+        <td><%= link_to 'Edit', edit_persona_path(persona) %></td>
+        <td><%= link_to 'Destroy', persona, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

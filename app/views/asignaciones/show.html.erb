@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Persona:</strong>
+  <%= @asignacione.persona %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @asignacione.fecha %>
+</p>
+
+<p>
+  <strong>Idestadopersonaequipo:</strong>
+  <%= @asignacione.idEstadoPersonaEquipo %>
+</p>
+<!--
+<p>
+  <strong>Eliminado:</strong>
+  <%= @asignacione.eliminado %>
+</p>
+-->
+
+<%= link_to 'Modificar', edit_asignacione_path(@asignacione), class:"btn btn-success" %> 
+<%= link_to 'Regresar', asignaciones_path, class:"btn btn-info" %>

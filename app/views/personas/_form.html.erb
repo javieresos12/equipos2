@@ -1,0 +1,69 @@
+<%= form_with(model: persona, local: true) do |form| %>
+  <% if persona.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(persona.errors.count, "error") %> prohibited this persona from being saved:</h2>
+
+      <ul>
+      <% persona.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :nombres %>
+    <%= form.text_field :nombres, id: :persona_nombres, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :apellidos %>
+    <%= form.text_field :apellidos, id: :persona_apellidos, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :identificacion %>
+    <%= form.text_field :identificacion, id: :persona_identificacion, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :persona_correo, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :idEstadoPersona %>
+    <%= form.text_field :idEstadoPersona, id: :persona_idEstadoPersona, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :idtipoPersona %>
+    <%= form.text_field :idtipoPersona, id: :persona_idtipoPersona, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :idarea %>
+    <%= form.text_field :idarea, id: :persona_idarea, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :idcargo %>
+    <%= form.text_field :idcargo, id: :persona_idcargo, class:"form-control" %>
+  </div>
+
+  <div class="form-group row col-sm-4">
+    <%= form.label :idTipoIdentificacion %>
+    <%= form.text_field :idTipoIdentificacion, id: :persona_idTipoIdentificacion, class:"form-control" %>
+  </div>
+<!--
+  <div class="field form-group row col-sm-4">
+    <%= form.label :eliminado %>
+    <%= form.text_field :eliminado, id: :persona_eliminado, class:"form-control" %>
+  </div>
+-->
+  <div class="actions">
+    <%= form.submit "Guardar", :class=>"btn btn-secondary" %>
+    <%= link_to 'Eliminar', persona, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %>
+  </div>
+
+<% end %>

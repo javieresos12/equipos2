@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asignaciones</h1>
+
+<%= link_to 'Nuevo', new_asignacione_path,class:'btn btn-primary btn-sm' %>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="w-50 text-center">IdPersona</th>
+      <th class="w-50 text-center">Fecha</th>
+      <th class="w-50 text-center">Idestadopersonaequipo</th>
+      <!-- <th class="w-50 text-center">Eliminado</th> -->
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asignaciones.each do |asignacione| %>
+      <tr>
+        <td><a href="/asignaciones/<%= asignacione['id'] %>" "Mostrar"><%= asignacione.persona %></a></td>
+        <td><%= asignacione.fecha %></td>
+        <td><%= asignacione.idEstadoPersonaEquipo %></td>
+       <!-- <td><%= asignacione.eliminado %></td>
+        <td><%= link_to 'Show', asignacione %></td>
+        <td><%= link_to 'Edit', edit_asignacione_path(asignacione) %></td>
+        <td><%= link_to 'Destroy', asignacione, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
