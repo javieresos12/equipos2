@@ -28,7 +28,7 @@ class ProveedoresController < BaseController
 
     respond_to do |format|
       if @proveedore.save
-        format.html { redirect_to @proveedore, notice: 'Proveedore was successfully created.' }
+        format.html { redirect_to @proveedore, notice: 'Proveedor ha sido creado exitosamente.' }
         format.json { render :show, status: :created, location: @proveedore }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ProveedoresController < BaseController
   def update
     respond_to do |format|
       if @proveedore.update(proveedore_params)
-        format.html { redirect_to @proveedore, notice: 'Proveedore was successfully updated.' }
+        format.html { redirect_to @proveedore, notice: 'Proveedor ha sido modificado exitosamente.' }
         format.json { render :show, status: :ok, location: @proveedore }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ProveedoresController < BaseController
   def destroy
     @proveedore.destroy
     respond_to do |format|
-      format.html { redirect_to proveedores_url, notice: 'Proveedore was successfully destroyed.' }
+      format.html { redirect_to proveedores_url, notice: 'Proveedor ha sido eliminado exitosamente.' }
       format.json { head :no_content }
     end
   end

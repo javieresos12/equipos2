@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :atributo %>
-    <%= form.text_field :atributo, id: :parametro_atributo %>
+    <%= form.text_field :atributo, id: :parametro_atributo, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :parametro_descripcion %>
+    <%= form.text_field :descripcion, id: :parametro_descripcion, class:"form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :estadoParametro %>
-    <%= form.text_field :estadoParametro, id: :parametro_estadoParametro %>
+    <%= form.text_field :estadoParametro, id: :parametro_estadoParametro, class:"form-control"  %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", :class=>"btn btn-secondary" %>
   </div>
 <% end %>

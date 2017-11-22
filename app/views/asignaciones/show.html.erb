@@ -1,25 +1,35 @@
-<p id="notice"><%= notice %></p>
+<h4>Informacion de Asignaciones</h4>
+<hr class="division">
+<%= link_to 'Regresar', asignaciones_path, class:"btn btn-info" %>
 
-<p>
-  <strong>Persona:</strong>
-  <%= @asignacione.persona %>
-</p>
+<div id="notice"><%= notice %></div>
+<form>
+<div class="form-group col-md-4">
+  <label>Persona:</label>
+   <input type="text" class="form-control" value="<%= @asignacione.persona_id %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @asignacione.fecha %>
-</p>
+<div class="form-group col-md-4">
+  <label>Fecha:</label>
+   <input type="text" class="form-control" value="<%= @asignacione.fecha %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Idestadopersonaequipo:</strong>
-  <%= @asignacione.idEstadoPersonaEquipo %>
-</p>
+<div class="form-group col-md-4">
+  <label>Idestadopersonaequipo:</label>
+   <input type="text" class="form-control" value=" <%= @asignacione.idEstadoPersonaEquipo %>" readonly>
+ 
+</div>
+</form>
 <!--
 <p>
   <strong>Eliminado:</strong>
   <%= @asignacione.eliminado %>
 </p>
 -->
+<% if @operaciones.include?("Modificar") %>
+  <%= link_to 'Modificar', edit_asignacione_path(@asignacione), class:"btn btn-success" %>
+<% end%>
+ 
 
-<%= link_to 'Modificar', edit_asignacione_path(@asignacione), class:"btn btn-success" %> 
-<%= link_to 'Regresar', asignaciones_path, class:"btn btn-info" %>

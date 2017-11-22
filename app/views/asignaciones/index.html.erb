@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Asignaciones</h1>
-
+<hr class="division">
 <%= link_to 'Nuevo', new_asignacione_path,class:'btn btn-primary btn-sm' %>
 
 <table class="table table-bordered">
@@ -18,7 +18,7 @@
   <tbody>
     <% @asignaciones.each do |asignacione| %>
       <tr>
-        <td><a href="/asignaciones/<%= asignacione['id'] %>" "Mostrar"><%= asignacione.persona %></a></td>
+        <td><a href="/asignaciones/<%= asignacione['id'] %>" "Mostrar"><%= asignacione.persona_id %></a></td>
         <td><%= asignacione.fecha %></td>
         <td><%= asignacione.idEstadoPersonaEquipo %></td>
        <!-- <td><%= asignacione.eliminado %></td>

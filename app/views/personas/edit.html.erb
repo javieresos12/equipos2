@@ -1,6 +1,8 @@
-<h1>Editing Persona</h1>
+<h1>Editar Persona</h1>
+<hr class="division">
+<%= link_to 'Mostrar', @persona, class:"btn btn-warning" %> 
+<%= link_to 'Regresar', personas_path, class:"btn btn-info" %>
 
 <%= render 'form', persona: @persona %>
 
-<%= link_to 'Show', @persona %> |
-<%= link_to 'Back', personas_path %>
+

@@ -1,54 +1,76 @@
-<p id="notice"><%= notice %></p>
+<h4>Informacion de Personas</h4>
 
-<p>
-  <strong>Nombres:</strong>
-  <%= @persona.nombres %>
-</p>
+<hr class="division">
+<div class="container">
+<%= link_to 'Regresar', personas_path,class:"btn btn-info" %> 
 
-<p>
-  <strong>Apellidos:</strong>
-  <%= @persona.apellidos %>
-</p>
+<div id="notice"><%= notice %></div>
 
-<p>
-  <strong>Identificacion:</strong>
-  <%= @persona.identificacion %>
-</p>
+<form>
+<div class="form-group col-md-4">
+  <label>Nombres:</label>
+  <input type="text" class="form-control" value=" <%= @persona.nombres %>" readonly>
+</div>
 
-<p>
-  <strong>Correo:</strong>
-  <%= @persona.correo %>
-</p>
+<div class="form-group col-md-4">
+  <label>Apellidos:</label>
+  <input type="text" class="form-control" value="<%= @persona.apellidos %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Idestadopersona:</strong>
-  <%= @persona.idEstadoPersona %>
-</p>
+<div class="form-group col-md-4">
+  <label>Identificacion:</label>
+<input type="text" class="form-control" value="<%= @persona.identificacion %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Idtipopersona:</strong>
-  <%= @persona.idtipoPersona %>
-</p>
+<div class="form-group col-md-4">
+  <label>Correo:</label>
+  <input type="text" class="form-control" value=" <%= @persona.correo %>" readonly>
+ 
+</div>
 
-<p>
-  <strong>Idarea:</strong>
+<div class="form-group col-md-4">
+  <label>Idestadopersona:</label>
+  <input type="text" class="form-control" value="<%= @persona.idEstadoPersona %>" readonly>
+  
+</div>
+
+<div class="form-group col-md-4">
+  <label>Idtipopersona:</label>
+   <input type="text" class="form-control" value="<%= @persona.idtipoPersona %>" readonly>
+  
+</div>
+
+<div class="form-group col-md-4">
+  <label>Idarea:</label>
+  <input type="text" class="form-control" value="<%= @persona.idtipoPersona %>" readonly>
   <%= @persona.idarea %>
-</p>
+</div>
 
-<p>
-  <strong>Idcargo:</strong>
-  <%= @persona.idcargo %>
-</p>
+<div class="form-group col-md-4">
+  <label>Idcargo:</label>
+  <input type="text" class="form-control" value=" <%= @persona.idcargo %>" readonly>
+ 
+</div>
 
-<p>
-  <strong>Idtipoidentificacion:</strong>
-  <%= @persona.idTipoIdentificacion %>
-</p>
+<div class="form-group col-md-4">
+  <label>Idtipoidentificacion:</label>
+  <input type="text" class="form-control" value="  <%= @persona.idTipoIdentificacion %>" readonly>
 
-<p>
-  <strong>Eliminado:</strong>
-  <%= @persona.eliminado %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_persona_path(@persona) %> |
-<%= link_to 'Back', personas_path %>
+<div class="form-group col-md-4">
+  <label>Eliminado:</label>
+  <input type="text" class="form-control" value="<%= @persona.eliminado %>" readonly>
+  
+</div>
+</form>
+
+<% if @operaciones.include?("Modificar") %>
+<%= link_to 'Modificar', edit_persona_path(@persona), class:"btn btn-success" %> 
+<% end%>
+
+
+
+</div>

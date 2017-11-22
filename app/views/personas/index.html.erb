@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Personas</h1>
-
+<hr class="division">
 <%= link_to 'Nuevo', new_persona_path, :class=>"btn btn-primary btn-sm" %>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-sm ">
   <thead>
     <tr>
+      <th class="w-50 text-center">Id</th>
       <th class="w-50 text-center">Nombres</th>
       <th class="w-50 text-center">Apellidos</th>
       <th class="w-50 text-center">Identificacion</th>
@@ -24,7 +25,8 @@
   <tbody>
     <% @personas.each do |persona| %>
       <tr>
-        <td><a href="/personas/<%= persona['id'] %>" "Mostrar"><%= persona.nombres %></a></td>
+        <td><a href="/personas/<%= persona['id'] %>" "Mostrar"><%= persona.id %></a></td>
+        <td><%= persona.nombres %></td>
         <td><%= persona.apellidos %></td>
         <td><%= persona.identificacion %></td>
         <td><%= persona.correo %></td>

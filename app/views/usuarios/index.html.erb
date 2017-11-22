@@ -1,6 +1,7 @@
 <div class="container">
 
 <h5>Manejo de Usuarios</h5>
+<hr class="division">
 <div class="navbar ">  
  <% if @operaciones.include?("Crear") %>
    <%= link_to 'Nuevo', new_usuario_path,class:'btn btn-primary btn-sm' %>

@@ -1,59 +1,81 @@
+<h4>Informacion de proveedores</h4>
+<hr class="division">
+<%= link_to 'Regresar', proveedores_path,class:"btn btn-info" %>
+<div class="container">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Identificacion:</strong>
-  <%= @proveedore.identificacion %>
-</p>
+<form>
+<div class="form-group col-md-4">
+  <label>Identificacion:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.identificacion %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @proveedore.nombre %>
-</p>
+<div class="form-group col-md-4">
+  <label>Nombre:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.nombre %>on %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Idciudad:</strong>
-  <%= @proveedore.idCiudad %>
-</p>
+<div class="form-group col-md-4">
+ <label>Idciudad:</label>
+ <input type="text" class="form-control" value="<%= @proveedore.idCiudad %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Iddpto:</strong>
-  <%= @proveedore.idDpto %>
-</p>
+<div class="form-group col-md-4">
+  <label>Iddpto:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.idDpto %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Dirreccion:</strong>
-  <%= @proveedore.dirreccion %>
-</p>
+<div class="form-group col-md-4">
+  <label>Dirreccion:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.dirreccion %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Correo:</strong>
-  <%= @proveedore.correo %>
-</p>
+<div class="form-group col-md-4">
+  <label>Correo:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.correo %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Telefonos:</strong>
-  <%= @proveedore.telefonos %>
-</p>
+<div class="form-group col-md-4">
+  <label>Telefonos:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.telefonos %>" readonly>
+ 
+</div>
 
-<p>
-  <strong>Idtipoprov:</strong>
-  <%= @proveedore.idTipoProv %>
-</p>
+<div class="form-group col-md-4">
+  <label>Idtipoprov:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.idTipoProv %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Idestadoprov:</strong>
-  <%= @proveedore.idEstadoProv %>
-</p>
+<div class="form-group col-md-4">
+  <label>Idestadoprov:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.idEstadoProv %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Idcategoriaprov:</strong>
-  <%= @proveedore.idCategoriaProv %>
-</p>
+<div class="form-group col-md-4">
+  <label>Idcategoriaprov:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.idCategoriaProv %>" readonly>
+  
+</div>
 
-<p>
-  <strong>Comentario:</strong>
-  <%= @proveedore.comentario %>
-</p>
+<div class="form-group col-md-4">
+  <label>Comentario:</label>
+  <input type="text" class="form-control" value="<%= @proveedore.comentario %>" readonly>
+  
+</div>
+</form>
 
-<%= link_to 'Edit', edit_proveedore_path(@proveedore) %> |
-<%= link_to 'Back', proveedores_path %>
+<% if @operaciones.include?("Modificar") %>
+  <%= link_to 'Modificar', edit_proveedore_path(@proveedore), class:"btn btn-success" %>
+<% end%>
+
+ 
+
+</div>

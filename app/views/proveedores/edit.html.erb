@@ -1,6 +1,10 @@
-<h1>Editing Proveedore</h1>
+<h1>Editar Proveedores</h1>
+<hr class="division">
+<%= link_to 'Regresar', proveedores_path, class:"btn btn-info" %>
+<%= link_to 'Mostrar', @proveedores, class:"btn btn-warning" %> 
 
 <%= render 'form', proveedore: @proveedore %>
 
-<%= link_to 'Show', @proveedore %> |
-<%= link_to 'Back', proveedores_path %>
+ <% if @operaciones.include?("Eliminar") %>
+       <%= link_to 'Eliminar', @proveedore, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %>
+   <% end %>

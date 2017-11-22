@@ -1,6 +1,9 @@
-<h1>Editing Asignacione</h1>
+<h1>Editar Asignaciones</h1>
+<hr class="division">
+<%= link_to 'Regresar', asignaciones_path, class:"btn btn-info" %>
+<%= link_to 'Mostrar', @asignaciones, class:"btn btn-warning" %> 
+
 
 <%= render 'form', asignacione: @asignacione %>
 
-<%= link_to 'Show', @asignacione %> |
-<%= link_to 'Back', asignaciones_path %>
+

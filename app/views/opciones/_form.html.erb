@@ -11,47 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :idpadre %>
-    <%= form.number_field :idpadre, id: :opcione_idpadre %>
+    <%= form.number_field :idpadre, id: :opcione_idpadre, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :opcion %>
-    <%= form.text_field :opcion, id: :opcione_opcion %>
+    <%= form.text_field :opcion, id: :opcione_opcion, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :url %>
-    <%= form.text_field :url, id: :opcione_url %>
+    <%= form.text_field :url, id: :opcione_url, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :estadoopcion %>
-    <%= form.text_field :estadoopcion, id: :opcione_estadoopcion %>
+    <%= form.text_field :estadoopcion, id: :opcione_estadoopcion, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :orden %>
-    <%= form.text_field :orden, id: :opcione_orden %>
+    <%= form.text_field :orden, id: :opcione_orden, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-1">
     <%= form.label :eshoja %>
-    <%= form.check_box :eshoja, id: :opcione_eshoja %>
+    <%= form.check_box :eshoja, id: :opcione_eshoja, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :controller %>
-    <%= form.text_field :controller, id: :opcione_controller %>
+    <%= form.text_field :controller, id: :opcione_controller, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :eliminado %>
-    <%= form.number_field :eliminado, id: :opcione_eliminado %>
+    <%= form.number_field :eliminado, id: :opcione_eliminado, class:"form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+<div class="actions">
+    <%= form.submit "Guardar", :class=>"btn btn-secondary" %>
+    <%= link_to 'Eliminar', opcione, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %>
   </div>
 <% end %>

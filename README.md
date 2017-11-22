@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+* link del video del proyectillo
+* https://youtu.be/MtDEkj987pM
